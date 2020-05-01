@@ -5,12 +5,15 @@ describe('testing connection to blockchain', () => {
 
   it('can get the latest block number', async () => {
     const currentBlock = await web3.eth.getBlock('latest');
+    console.log('current block:', currentBlock);
     expect(currentBlock.number).toBe(0);
   });
 
   it('can get the balance of account 4', async () => {
+    console.log('getting balance');
     const accounts = await web3.eth.getAccounts();
     const balance = await web3.eth.getBalance(accounts[3]);
+    console.log('balance:', balance);
     expect(parseInt(balance, 10)).toBe(100000000000000000001);
   });
 });
