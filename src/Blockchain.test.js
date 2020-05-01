@@ -1,7 +1,7 @@
 import Web3 from 'web3';
 
 describe('testing connection to blockchain', () => {
-  const web3 = new Web3('http://0.0.0.0:8545');
+  const web3 = new Web3(process.env.REACT_APP_NODE);
   const ONE_HUNDREAD = 100000000000000000000;
   const ONE = ONE_HUNDREAD / 100;
 
