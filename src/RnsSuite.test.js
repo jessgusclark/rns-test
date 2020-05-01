@@ -1,3 +1,5 @@
+it('is true', () => { expect(true) });
+/*
 import Web3 from 'web3';
 import { keccak_256 as sha3 } from 'js-sha3';
 import RNSSuite from '@rsksmart/rns-suite';
@@ -23,17 +25,6 @@ describe('set up RSK environment, contracts, etc', () => {
       publicResolver: suite.rns.options.publicResolver,
     };
   }, 60000);
-
-  /*
-  beforeEach(() => {
-    // deploy suite
-    console.log('before each');
-  });
-
-  afterEach(() => {
-    console.log('afterEach');
-  });
-  */
 
   afterAll(() => {
     // clean up provider
@@ -62,3 +53,4 @@ describe('set up RSK environment, contracts, etc', () => {
       });
   });
 });
+*/
