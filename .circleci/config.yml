@@ -8,8 +8,8 @@ jobs:
         command: ganache-cli --deterministic
     steps:
       - checkout
-      - run: node ./.circleci/rns-suite.js
       - run: yarn
+      - run: node ./.circleci/rns-suite.js
       - run: yarn test
 
 
