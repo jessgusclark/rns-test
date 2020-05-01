@@ -14,6 +14,6 @@ describe('testing connection to blockchain', () => {
     const accounts = await web3.eth.getAccounts();
     const balance = await web3.eth.getBalance(accounts[3]);
     console.log('balance:', balance);
-    expect(parseInt(balance, 10)).toBe(100000000000000000001);
+    expect(parseInt(balance, 10)).toBe(4);
   });
 });
