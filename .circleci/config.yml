@@ -1,17 +1,14 @@
-version: 2.1
-orbs:
-  node: circleci/node@1.1.6
+version: 2
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
+  build:
+    working_directory: ~/tmp
+    docker:
+      - image: circleci/node:12
+      - image: trufflesuite/ganache-cli
+        command: ganache-cli --deterministic
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: npm test
-workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+      - run: yarn
+      - run: yarn test
+
+
