@@ -76,10 +76,9 @@ describe('set up RSK environment, contracts, etc', () => {
     const rskOwner = new web3.eth.Contract(rskOwnerAbi, addresses.rskOwner);
     const hash = `0x${sha3('david')}`;
 
-    return rskOwner.methods.available(hash).call()
-      .then((available) => {
-        expect(available).toBeFalsy();
-      });
+    const available = await rskOwner.methods.available(hash).call();
+    console.log('expecting false');
+    expect(available).toBeFalsy();
   });
   /*
   it('it should show the domain foobar as available', async () => {
