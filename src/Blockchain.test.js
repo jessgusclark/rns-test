@@ -31,8 +31,8 @@ describe('testing connection to blockchain', () => {
     console.log('balanceAccount3', balanceAccount3);
     console.log('balanceAccount4', balanceAccount4);
 
-    expect(balanceAccount3 < ONE_HUNDREAD).toBeTruthy();
-    expect(balanceAccount4).toEqual(ONE_HUNDREAD + ONE);
-
+    // less than 99 becuse of gas fees:
+    expect(parseInt(balanceAccount3, 10) < (ONE_HUNDREAD - ONE)).toBeTruthy();
+    expect(parseInt(balanceAccount4, 10)).toEqual(ONE_HUNDREAD + ONE);
   });
 });
