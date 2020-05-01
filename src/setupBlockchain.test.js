@@ -70,7 +70,7 @@ describe('set up RSK environment, contracts, etc', () => {
     const balance = await web3.eth.getBalance(accounts[1]);
     expect(parseInt(balance, 10)).toBe(ONE_HUNDREAD);
   });
-  /*
+
   it('it should show the domain david as unavailable', async () => {
     console.log('checking david');
     const rskOwner = new web3.eth.Contract(rskOwnerAbi, addresses.rskOwner);
@@ -81,7 +81,7 @@ describe('set up RSK environment, contracts, etc', () => {
         expect(available).toBeFalsy();
       });
   });
-
+  /*
   it('it should show the domain foobar as available', async () => {
     console.log('checking foobar');
     const rskOwner = new web3.eth.Contract(rskOwnerAbi, addresses.rskOwner);
