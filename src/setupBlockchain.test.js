@@ -3,11 +3,11 @@ import ganache from 'ganache-cli';
 import { keccak_256 as sha3 } from 'js-sha3';
 import RNSSuite from '@rsksmart/rns-suite';
 
-import { rskOwnerAbi } from './abis/search.json';
+// import { rskOwnerAbi } from './abis/search.json';
 
 console.log('before describe');
 const ONE_HUNDREAD = 100000000000000000000;
-const ONE = ONE_HUNDREAD / 100;
+// const ONE = ONE_HUNDREAD / 100;
 
 describe('set up RSK environment, contracts, etc', () => {
   let web3;
@@ -70,7 +70,7 @@ describe('set up RSK environment, contracts, etc', () => {
     const balance = await web3.eth.getBalance(accounts[1]);
     expect(parseInt(balance, 10)).toBe(ONE_HUNDREAD);
   });
-
+  /*
   it('it should show the domain david as unavailable', async () => {
     console.log('checking david');
     const rskOwner = new web3.eth.Contract(rskOwnerAbi, addresses.rskOwner);
@@ -92,4 +92,5 @@ describe('set up RSK environment, contracts, etc', () => {
         expect(available).toBeTruthy();
       });
   });
+  */
 });
