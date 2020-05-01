@@ -8,10 +8,7 @@ jobs:
         command: ganache-cli --deterministic
     steps:
       - checkout
-      - run:
-        - name: Install React Project
-        - command: yarn
-      - run:
-        - name: Lets Test
-        - command: yarn test
+      - run: yarn
+      - run: yarn test
+
 
