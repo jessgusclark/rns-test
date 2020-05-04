@@ -1,5 +1,3 @@
-it('is true', () => { expect(true) });
-/*
 import Web3 from 'web3';
 import { keccak_256 as sha3 } from 'js-sha3';
 import RNSSuite from '@rsksmart/rns-suite';
@@ -53,4 +51,3 @@ describe('set up RSK environment, contracts, etc', () => {
       });
   });
 });
-*/
