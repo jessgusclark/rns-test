@@ -4,7 +4,7 @@ const local = 'http://127.0.0.1:7545';
 const circleci = 'http://0.0.0.0:8545';
 
 RNSSuite (
-  local,
+  circleci,
   ['alice', 'bob', 'charlie'],
   ['david', 'eve', 'frank']
 ).then(suite => {
