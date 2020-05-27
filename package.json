@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "env-cmd -f .env.circleci react-scripts test",
+    "test": "env-cmd -f .env.circleci node ./.circleci/rns-suite.js && react-scripts test",
     "test:local": "env-cmd -f .env.testlocal react-scripts test",
     "eject": "react-scripts eject"
   },
